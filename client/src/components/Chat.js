@@ -1,6 +1,6 @@
-import { useAddMessage, useMessages } from '../graphql/hooks';
-import MessageInput from './MessageInput';
-import MessageList from './MessageList';
+import { useAddMessage, useMessages } from "../graphql/hooks";
+import MessageInput from "./MessageInput";
+import MessageList from "./MessageList";
 
 function Chat({ user }) {
   const { messages } = useMessages();
@@ -13,9 +13,7 @@ function Chat({ user }) {
   return (
     <section className="section">
       <div className="container">
-        <h1 className="title">
-          Chatting as {user.id}
-        </h1>
+        <h1 className="title">Chat as {user.id}</h1>
         <MessageList user={user} messages={messages} />
         <MessageInput onSend={handleSend} />
       </div>
